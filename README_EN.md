@@ -48,7 +48,7 @@ gmksc/
 
 ```bash
 git clone https://github.com/YourName/gmksc.git
-cd gmksc
+cd GMKSC
 pip install -e .
 ```
 
@@ -62,11 +62,15 @@ python -m gmksc.demo
 
 Example output:
 ```
-=== GMK-SC Non-Symmetric Demo ===
-Message: b'Hello, Graph Marker-KEM Stream Cipher!'
-Ciphertext: 3a8f...da92...
-Recovered: Hello, Graph Marker-KEM Stream Cipher!
-✅ Success
+=== Demo GMK-SC ===
+Graph nodes: 20
+Salt: 30e7bb5044bd03ba794968b0
+Start node: 3
+Session key k: 5871d4e7ec515d75f9bcb0a2e0c914fd26012eea ...
+Degrees: [4, 5, 4, 5, 4, 4, 3, 2, 4, 2, 3, 2, 4, 5, 2, 4, 3, 3, 3, 4, 4, 4, 4, 4, 4, 3, 5, 3, 2, 4, 2, 4, 5, 3, 4, 2, 4, 5]
+Ciphertext (hex): be8ce32b8aa742fff17908abe74471fd9893625a42bec5535f05721f63f7 ...
+Recovered plaintext: Hello, Graph Marker-KEM Stream Cipher!
+Success: OK
 ```
 
 ---
@@ -89,7 +93,6 @@ and performs the same random walk on G₀ to reproduce the keystream for decrypt
 ## 📚 Specification
 
 See also:  
-- [📄 Chinese Version (gmksc_v1_cn.md)](spec/gmksc_v1_cn.md)  
 - [📄 English Version (gmksc_v1_en.md)](spec/gmksc_v1_en.md)
 
 ---

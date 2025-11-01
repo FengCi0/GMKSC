@@ -4,7 +4,7 @@
 
 ---
 
-## 📘 简介 | Overview
+## 📘 简介
 
 **GMK-SC（Graph Marker-KEM Stream Cipher）** 是一种创新的加密算法，  
 将**图同构（Graph Isomorphism）问题**与**公钥封装机制（KEM）**相结合，  
@@ -19,7 +19,7 @@
 
 ---
 
-## 🧱 项目结构 | Project Structure
+## 🧱 项目结构
 
 ```
 gmksc/
@@ -46,17 +46,17 @@ gmksc/
 
 ---
 
-## ⚙️ 安装 | Installation
+## ⚙️ 安装
 
 ```bash
-git clone https://github.com/YourName/gmksc.git
-cd gmksc
+git clone https://github.com/FengCi0/GMKSC.git
+cd GMKSC
 pip install -e .
 ```
 
 ---
 
-## ▶️ 运行示例 | Quick Demo
+## ▶️ 运行示例
 
 ```bash
 python -m gmksc.demo
@@ -64,16 +64,20 @@ python -m gmksc.demo
 
 输出示例：
 ```
-=== GMK-SC Non-Symmetric Demo ===
-Message: b'Hello, Graph Marker-KEM Stream Cipher!'
-Ciphertext: 3a8f...da92...
-Recovered: Hello, Graph Marker-KEM Stream Cipher!
-✅ Success
+=== Demo GMK-SC ===
+Graph nodes: 20
+Salt: 30e7bb5044bd03ba794968b0
+Start node: 3
+Session key k: 5871d4e7ec515d75f9bcb0a2e0c914fd26012eea ...
+Degrees: [4, 5, 4, 5, 4, 4, 3, 2, 4, 2, 3, 2, 4, 5, 2, 4, 3, 3, 3, 4, 4, 4, 4, 4, 4, 3, 5, 3, 2, 4, 2, 4, 5, 3, 4, 2, 4, 5]
+Ciphertext (hex): be8ce32b8aa742fff17908abe74471fd9893625a42bec5535f05721f63f7 ...
+Recovered plaintext: Hello, Graph Marker-KEM Stream Cipher!
+Success: OK
 ```
 
 ---
 
-## 🧠 算法简介 | Algorithm Overview
+## 🧠 算法简介
 
 1️⃣ **密钥生成 (KeyGen)**  
  生成私钥图 G₀、随机置换 π、公钥图 G_pub，以及每节点的公私钥。  
@@ -88,21 +92,20 @@ Recovered: Hello, Graph Marker-KEM Stream Cipher!
 
 ---
 
-## 📚 技术规范 | Specification
+## 📚 技术规范
 
 详见：
-- [📄 中文版规范 (gmksc_v1_cn.md)](spec/gmksc_v1_cn.md)  
-- [📄 English version (gmksc_v1_en.md)](spec/gmksc_v1_en.md)
+- [📄 中文版规范 (gmksc_v1_cn.md)](spec/gmksc_v1_cn.md)
 
 ---
 
-## 📜 许可协议 | License
+## 📜 许可协议
 Apache License 2.0
 
 ---
 
 ## 🤝 贡献者 | Contributors
 欢迎研究者、密码学爱好者共同完善 GMK-SC。  
-Issues / Pull Requests 欢迎提交到：[GitHub Repository](https://github.com/YourName/gmksc)
+Issues / Pull Requests 欢迎提交到：[GitHub Repository](https://github.com/FengCi0/GMKSC)
 
 ---

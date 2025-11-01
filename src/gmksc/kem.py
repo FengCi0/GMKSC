@@ -8,7 +8,7 @@ def node_keygen():
     return priv, pub
 
 def encapsulate(pub):
-    """Alice端：生成会话密钥和封装"""
+    """生成会话密钥和封装"""
     eph_priv = x25519.X25519PrivateKey.generate()
     eph_pub = eph_priv.public_key()
     shared = eph_priv.exchange(pub)
@@ -17,7 +17,7 @@ def encapsulate(pub):
     return eph_pub.public_bytes_raw(), k
 
 def decapsulate(priv, eph_pub_bytes):
-    """Bob端：解封装"""
+    """解封装"""
     eph_pub = x25519.X25519PublicKey.from_public_bytes(eph_pub_bytes)
     shared = priv.exchange(eph_pub)
     kdf = HKDF(algorithm=hashes.SHA256(), length=32, salt=None, info=b'GMK-KEM')

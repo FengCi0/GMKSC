@@ -8,16 +8,24 @@ from gmksc.encrypt import encrypt
 from gmksc.decrypt import decrypt
 
 def demo():
-    print("=== GMK-SC Non-Symmetric Demo ===")
+    print("=== Demo GMK-SC ===")
     public, private = keygen(n=20, p=0.15)
-    message = b"Hello, Graph Marker-KEM Stream Cipher!"
+    
+    message = "Hello, Graph Marker-KEM Stream Cipher!".encode('utf-8')
     packet = encrypt(public, message)
+    
     recovered = decrypt(private, packet)
-    print("Message:", message)
-    print("Ciphertext:", packet["ciphertext"].hex())
-    print("Recovered:", recovered.decode())
+
+    print(f"Graph nodes: {len(public['G_pub'])}")
+    print(f"Salt: {packet['salt'].hex()}")
+    print(f"Start node: {packet['start']}")
+    print(f"Session key k: {packet['k'].hex()[:40]} ...")
+    print(f"Degrees: {packet['degrees']}")
+    print(f"Ciphertext (hex): {packet['ciphertext'].hex()[:60]} ...")
+    print(f"Recovered plaintext: {recovered.decode('utf-8')}")
+
     if recovered == message:
-        print("✅ Success")
+        print("Success: OK")
 
 if __name__ == "__main__":
     demo()

@@ -35,4 +35,4 @@ def encrypt(public, plaintext: bytes):
     nonce = hashlib.sha256(salt + k).digest()[:12]
     ciphertext = aead.encrypt(nonce, plaintext, salt)
 
-    return {"salt": salt, "start": start, "eph_pub": eph_pub, "ciphertext": ciphertext}
+    return {"salt": salt, "start": start, "eph_pub": eph_pub, "ciphertext": ciphertext, "k": k, "degrees": degrees}

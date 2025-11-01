@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='gmksc',
+    name='GMKSC',
     version='1.0.0',
     author='Feng Ci',
     author_email='1719444178@qq.com',

@@ -4,7 +4,6 @@ def sha256(b): return hashlib.sha256(b).digest()
 
 def generate_graph(n, p=0.1):
     """生成随机无向图"""
-    """"""
     g = [[] for _ in range(n)]
     for i in range(n):
         for j in range(i+1, n):
